@@ -13,7 +13,7 @@ const Users = () =>{
     return <Spinner />
   } else {
     return(
-      <div className="ui grid container" style={{marginTop: '1rem'}}>
+      <div className="ui centered grid container" style={{marginTop: '1rem'}}>
         { users.map(user => (
           <UserItem key={user.id} user={user} />
         ))}

@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom'
 
 const Header= () => {
     return(
-      <div className="ui clearing inverted segment" style={{marginTop: '1rem'}}>
-        <div className="ui right floated header">
-        <Link to='/about' style={{color:'#FFF'}}>About</Link>
+      <div className="ui attached stackable inverted menu">
+        <div className="ui container">
+          <h3 className="ui header item" style={{padding: '5px 5px'}} >
+            <i className="github icon"></i>
+            <div>GitHub User Search</div>
+          </h3>
+          <Fragment>
+            <div className="ui header right item" style={{padding: '5px 5px'}}>
+            <Link to="/" style={{color:'#FFF', margin: '1rem'}}>Home</Link>
+            <Link to='/about' style={{color:'#FFF'}}>About</Link>
+            </div>
+          </Fragment>
         </div>
-        <div className="ui right floated header">
-          <Link to="/" style={{color:'#FFF'}}>Home</Link>
-        </div>
-        <h3 className="ui left floated header">
-          <i className="github icon"></i>
-          <div className="content">GitHub User Search</div>
-        </h3>
       </div>
     );
 };
